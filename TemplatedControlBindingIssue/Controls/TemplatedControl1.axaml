@@ -1,0 +1,48 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="using:TemplatedControlBindingIssue.Controls"
+                    xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia">
+    <Design.PreviewWith>
+        <controls:TemplatedControl1 State="Default" Width="250" />
+    </Design.PreviewWith>
+
+    <ControlTheme x:Key="{x:Type controls:TemplatedControl1}" TargetType="controls:TemplatedControl1">
+        <!-- Set Defaults -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid ColumnDefinitions="*,Auto">
+                    <TextBlock Grid.Column="0" Text="{TemplateBinding State}" VerticalAlignment="Center" Margin="8" />
+                    <Button Grid.Column="1" Theme="{StaticResource MaterialFlatButton}">
+                        <avalonia:MaterialIcon
+                            Foreground="Gray"
+                            Kind="Menu"
+                            MinHeight="48"
+                            MinWidth="48" />
+                        <Button.Flyout>
+                            <MenuFlyout>
+                                <MenuItem
+                                    IsVisible="{Binding MenuItem1Visible, RelativeSource={RelativeSource TemplatedParent}}"
+                                    Header="Menu 1"
+                                    Command="{TemplateBinding MenuItem1}"
+                                    CommandParameter="{TemplateBinding State}">
+                                </MenuItem>
+                                <MenuItem
+                                    IsVisible="{Binding MenuItem2Visible, RelativeSource={RelativeSource TemplatedParent}}"
+                                    Header="Menu 2"
+                                    Command="{TemplateBinding MenuItem2}"
+                                    CommandParameter="{TemplateBinding State}">
+                                </MenuItem>
+                                <MenuItem
+                                    IsVisible="{Binding MenuItem3Visible, RelativeSource={RelativeSource TemplatedParent}}"
+                                    Header="Menu 3"
+                                    Command="{TemplateBinding MenuItem3}"
+                                    CommandParameter="{TemplateBinding State}">
+                                </MenuItem>
+                            </MenuFlyout>
+                        </Button.Flyout>
+                    </Button>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>
