@@ -3,7 +3,6 @@
         xmlns:vm="using:TemplatedControlBindingIssue.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:controls="clr-namespace:Material.Styles.Controls;assembly=Material.Styles"
         xmlns:controls1="clr-namespace:TemplatedControlBindingIssue.Controls"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="TemplatedControlBindingIssue.Views.MainWindow"
@@ -17,25 +16,11 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
-    <ItemsControl ItemsSource="{Binding ControlModels}">
-        <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-                <UniformGrid
-                    Rows="3"
-                    Columns="3"
-                    Margin="1"
-                    Background="WhiteSmoke" />
-            </ItemsPanelTemplate>
-        </ItemsControl.ItemsPanel>
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <controls:Card MinWidth="150" MinHeight="79" Margin="2" Padding="0" CornerRadius="0">
-                    <controls1:TemplatedControl1
-                        State="{Binding State}" />
-                </controls:Card>
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
-
-    </ItemsControl>
+    <StackPanel Background="WhiteSmoke">
+        <controls1:TemplatedControl1 Background="White" Margin="5" State="{Binding Model1.State}" />
+        <controls1:TemplatedControl1 Background="White" Margin="6" State="{Binding Model2.State}" />
+        <controls1:TemplatedControl1 Background="White" Margin="7" State="{Binding Model3.State}" />
+        <controls1:TemplatedControl1 Background="White" Margin="8" State="{Binding Model4.State}" />
+    </StackPanel>
 
 </Window>
