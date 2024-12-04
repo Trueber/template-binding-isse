@@ -35,6 +35,14 @@ public class TemplatedControl1 : TemplatedControl
         set => SetValue(StateProperty, value);
     }
 
+    public static readonly StyledProperty<string> Header1Property = AvaloniaProperty.Register<TemplatedControl1, string>(nameof(Header1));
+
+    public string Header1
+    {
+        get => GetValue(Header1Property);
+        set => SetValue(Header1Property, value);
+    }
+
     public static readonly StyledProperty<ICommand?> MenuItem1Property = AvaloniaProperty.Register<TemplatedControl1, ICommand?>(nameof(MenuItem1));
 
     public ICommand? MenuItem1
@@ -52,6 +60,14 @@ public class TemplatedControl1 : TemplatedControl
         set => SetValue(MenuItem1VisibleProperty, value);
     }
 
+    public static readonly StyledProperty<string> Header2Property = AvaloniaProperty.Register<TemplatedControl1, string>(nameof(Header2));
+
+    public string Header2
+    {
+        get => GetValue(Header2Property);
+        set => SetValue(Header2Property, value);
+    }
+
     public static readonly StyledProperty<ICommand?> MenuItem2Property = AvaloniaProperty.Register<TemplatedControl1, ICommand?>(nameof(MenuItem2));
 
     public ICommand? MenuItem2
@@ -67,6 +83,14 @@ public class TemplatedControl1 : TemplatedControl
     {
         get => GetValue(MenuItem2VisibleProperty);
         set => SetValue(MenuItem2VisibleProperty, value);
+    }
+
+    public static readonly StyledProperty<string> Header3Property = AvaloniaProperty.Register<TemplatedControl1, string>(nameof(Header3));
+
+    public string Header3
+    {
+        get => GetValue(Header3Property);
+        set => SetValue(Header3Property, value);
     }
 
     public static readonly StyledProperty<ICommand?> MenuItem3Property = AvaloniaProperty.Register<TemplatedControl1, ICommand?>(nameof(MenuItem3));

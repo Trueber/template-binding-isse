@@ -17,10 +17,14 @@
     </Design.DataContext>
 
     <StackPanel Background="WhiteSmoke">
-        <controls1:TemplatedControl1 Background="White" Margin="5" State="{Binding Model1.State}" />
-        <controls1:TemplatedControl1 Background="White" Margin="6" State="{Binding Model2.State}" />
-        <controls1:TemplatedControl1 Background="White" Margin="7" State="{Binding Model3.State}" />
-        <controls1:TemplatedControl1 Background="White" Margin="8" State="{Binding Model4.State}" />
+        <controls1:TemplatedControl1 Background="White" Margin="5" State="{Binding Model1.State}" Header1="Menu1"
+                                     Header2="Menu2" Header3="Menu 3" />
+        <controls1:TemplatedControl1 Background="White" Margin="6" State="{Binding Model2.State}" Header1="Menu1"
+                                     Header2="Menu2" Header3="Menu 3" />
+        <controls1:TemplatedControl1 Background="White" Margin="7" State="{Binding Model3.State}" Header1="Menu1"
+                                     Header2="Menu2" Header3="Menu 3" />
+        <controls1:TemplatedControl1 Background="White" Margin="8" State="{Binding Model4.State}" Header1="Menu1"
+                                     Header2="Menu2" Header3="Menu 3" />
     </StackPanel>
 
 </Window>

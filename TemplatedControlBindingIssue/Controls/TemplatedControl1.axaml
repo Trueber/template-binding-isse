@@ -21,20 +21,20 @@
                         <Button.Flyout>
                             <MenuFlyout>
                                 <MenuItem
-                                    IsVisible="{Binding MenuItem1Visible, RelativeSource={RelativeSource TemplatedParent}}"
-                                    Header="Menu 1"
+                                    IsVisible="{TemplateBinding MenuItem1Visible}"
+                                    Header="{TemplateBinding Header1}"
                                     Command="{TemplateBinding MenuItem1}"
                                     CommandParameter="{TemplateBinding State}">
                                 </MenuItem>
                                 <MenuItem
-                                    IsVisible="{Binding MenuItem2Visible, RelativeSource={RelativeSource TemplatedParent}}"
-                                    Header="Menu 2"
+                                    IsVisible="{TemplateBinding MenuItem2Visible}"
+                                    Header="{TemplateBinding Header2}"
                                     Command="{TemplateBinding MenuItem2}"
                                     CommandParameter="{TemplateBinding State}">
                                 </MenuItem>
                                 <MenuItem
-                                    IsVisible="{Binding MenuItem3Visible, RelativeSource={RelativeSource TemplatedParent}}"
-                                    Header="Menu 3"
+                                    IsVisible="{TemplateBinding MenuItem3Visible}"
+                                    Header="{TemplateBinding Header3}"
                                     Command="{TemplateBinding MenuItem3}"
                                     CommandParameter="{TemplateBinding State}">
                                 </MenuItem>
